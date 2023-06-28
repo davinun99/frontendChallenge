@@ -1,7 +1,8 @@
 # Around Front End Challenge 💻 🎟️
 ---
+<p align="center">
 <img width="368" alt="image" src="https://github.com/AroundTo/frontendChallenge/assets/8725846/46edfec9-b70e-4bcf-a5a8-559b4c8d8f1b">
-
+</p>
 ---
 
 Welcome to the Around Front End Challenge! This challenge is designed to assess your front-end development skills using React, Typescript and multiple technologies. Please read the following instructions and guidelines before starting the challenge.
@@ -18,6 +19,10 @@ NOTE: if any of the following topics is not clear, please feel free to ask us an
 1. Create a route to visualize all products with their reviews and be able to add one more.
 2. Create a route to visualize all reviews with their products and be able to add one more.
 any propusal in terms of design and UX will be welcome.
+<p align="center">
+<img width="355" alt="image" src="https://github.com/AroundTo/frontendChallenge/assets/8725846/0e47dbeb-5d92-4949-9e28-c39aff940c78">
+<img width="230" alt="image" src="https://github.com/AroundTo/frontendChallenge/assets/8725846/0d880c34-ed9d-420d-8e79-a4edaeaa6822">
+</p>
 
 **That's it!** You can use any additional libraries or frameworks you want, but make sure to follow the guidelines below.
 
