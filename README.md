@@ -1,9 +1,11 @@
 # Around Front End Challenge 💻 🎟️
 ---
 <img width="368" alt="image" src="https://github.com/AroundTo/frontendChallenge/assets/8725846/46edfec9-b70e-4bcf-a5a8-559b4c8d8f1b">
+
 ---
 
 Welcome to the Around Front End Challenge! This challenge is designed to assess your front-end development skills using React, Typescript and multiple technologies. Please read the following instructions and guidelines before starting the challenge.
+
 ---
 NOTE: if any of the following topics is not clear, please feel free to ask us any question, or make any assumption that you consider necessary to complete the challenge.
 
