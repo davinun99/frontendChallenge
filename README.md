@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Around Front End Challenge 💻 🎟️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Around Front End Challenge! This challenge is designed to assess your front-end development skills using React, Typescript and multiple technologies. Please read the following instructions and guidelines before starting the challenge.
+NOTE: if any of the following topics is not clear, please feel free to ask us any question, or make any assumption that you consider necessary to complete the challenge.
 
-## Available Scripts
+## Instructions
+1. Fork this repo.
+2. Modify the code to complete the challenge.
+3. Create a pull request to submit your solution.
 
-In the project directory, you can run:
+## Challenge
+1. Create a route to visualize all products with their reviews and be able to add one more.
+2. Create a route to visualize all reviews with their products and be able to add one more.
+any propusal in terms of design and UX will be welcome.
 
-### `npm start`
+**That's it!** You can use any additional libraries or frameworks you want, but make sure to follow the guidelines below.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Things to evaluate from high to low priority
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+While evaluating your submission, we will consider the following aspects:
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Usage of `Typescript`
+2. Usage of `eslint.js` , `prettier.js` and `tsconfig.json` attached to the project
+3. Be able to use `GraphQL`
+ schema and graphQL endpoint:
+```https://blue-surf-1040009.us-east-1.aws.cloud.dgraph.io/graphql```
+4. Usage of `subscriptions` to update the UI in real time from any other client
+5. Design and UX proposal
 
-### `npm run build`
+## Extra Topics to Evaluate
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Code structure and organization:** Is the code logically structured, modular, and easy to understand?
+3. **Filtering:** Any proposal to filter the data from UI or graphql query
+4. **Tech stach:** Do you suggest any tecnology or library to improve the project?
+5. **Typing GraphQL** Do you suggest any way to type the graphql schema?
+4. **Rules** Do you consider that the previous rules are not enough or should be different?, be free to propose any change to the rules in your PR 
+3. **Responsive design:** Does the application provide a flawless user experience across different devices and screen sizes?
+4. **Documentation:** We love self explanatory code, but we also like any kind of documentation that you consider necessary to understand your code
+6. **Extra features:** Any extra feature that you consider that could be useful for the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to reach out if you have any questions or need further clarification. Good luck, and happy coding! 🚀
