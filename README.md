@@ -33,9 +33,16 @@ While evaluating your submission, we will consider the following aspects:
 
 1. Usage of `Typescript`
 2. Usage of `eslint.js` , `prettier.js` and `tsconfig.json` attached to the project
-3. Be able to use `GraphQL`
+3. Be able to use `GraphQL`:
+
  schema and graphQL endpoint:
+
 ```https://blue-surf-1040009.us-east-1.aws.cloud.dgraph.io/graphql```
+
+wss endpoint:
+
+```wss://blue-surf-1040009.us-east-1.aws.cloud.dgraph.io/graphql```
+
 4. Usage of `subscriptions` to update the UI in real time from any other client
 5. Design and UX proposal
 
