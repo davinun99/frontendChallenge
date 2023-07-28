@@ -6,8 +6,10 @@ import App from './App'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 
+const uri = 'https://blue-surf-1040009.us-east-1.aws.cloud.dgraph.io/graphql'
+
 const client = new ApolloClient({
-  uri: 'https://blue-surf-1040009.us-east-1.aws.cloud.dgraph.io/graphql/',
+  uri,
   cache: new InMemoryCache()
 })
 

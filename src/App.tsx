@@ -1,15 +1,12 @@
 import React from 'react'
-import logo from './around-logo.webp'
+// import logo from './around-logo.webp'
 import './App.css'
+import ReviewListContainer from './components/ReviewList'
 
 const App = () => (
     <div className="App">
       <header className="App-header">
-        <img alt="logo" className="breathing-animation" src={logo} />
-        <p>
-          Check <code>README.md</code> file
-        </p>
-
+        <ReviewListContainer />
       </header>
     </div>
 )
