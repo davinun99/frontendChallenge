@@ -47,6 +47,9 @@ body{
 .review-title{
   font-weight: bold;
   color: rgba(86, 65, 255, 1);
+  &::first-letter {
+    text-transform: capitalize;
+  }
 }
 .review-card{
   border: 1px solid rgba(253, 136, 152, 1);
