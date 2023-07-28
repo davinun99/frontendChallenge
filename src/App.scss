@@ -22,4 +22,34 @@ body{
     padding: 5px;
     border-radius: 5px;
   }
+  &:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    // box-shadow: 0 .25rem .5rem rgba(0,0,0,.075)!important;
+    // box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    transition: all 0.25s ease-out;
+  }
+}
+
+
+.reviewer-photo{
+  width: 30px;
+  height: 30px;
+}
+.reviewer-check {
+  color: rgb(25,135,84);
+  margin-left: 5px;
+  // color: white;
+}
+.stars-list{
+  display: flex;
+  gap:2px;
+}
+.review-title{
+  font-weight: bold;
+  color: rgba(86, 65, 255, 1);
+}
+.review-card{
+  border: 1px solid rgba(253, 136, 152, 1);
+  padding: 10px;
+  border-radius: 5px;
 }
