@@ -4,6 +4,7 @@ import {
 import ErrorPage from './pages/ErrorPage'
 import ProductsPage from './pages/ProductsPage'
 import ReviewsPage from './pages/ReviewsPage'
+import AddProductPage from './pages/AddProductPage'
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,11 @@ export const router = createBrowserRouter([
   {
     path: '/reviews',
     element: <ReviewsPage />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/add-product',
+    element: <AddProductPage />,
     errorElement: <ErrorPage />
   }
 ])
