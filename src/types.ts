@@ -4,15 +4,19 @@ export type Item = {
   name: string;
   price: number;
 }
-
-export type ReviewItem = {
+export type Review = {
   id: string;
   text: string;
   item?: Item;
 }
 export type GraphQlReview = {
-  queryReview: ReviewItem[];
+  queryReview: Review[];
 };
 export type GraphQlItem = {
   queryItem: Item[];
+}
+export type GraphQLAddProduct = {
+  addItem: {
+    numUids: number
+  }
 }
