@@ -4,6 +4,24 @@ body{
   // font-family: 'Smooch', cursive;
   // font-family: 'Zeyada', cursive;
 }
+
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(#fff, 0.75);
+  z-index: 9999;
+  .spin-container {
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -40px 0 0 -40px;
+  }
+}
+
 .around-card{
   background-color: rgba(253, 136, 152, 0.2);
   border-radius: 5px;
