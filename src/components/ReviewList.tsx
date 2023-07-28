@@ -11,7 +11,6 @@ const ReviewList: React.FC<Props> = ({ data }) => {
   console.log('Review list', { data })
   return (
     <main className="container">
-      <h3 className='shadow-sm rounded p-3 mt-3 text-center'>Reviews</h3>
       <div className='d-flex justify-content-end'>
         <button className='btn btn-primary mt-3' type='button'>Add Review</button>
       </div>

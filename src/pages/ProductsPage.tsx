@@ -3,6 +3,7 @@ import { gql, useSubscription } from '@apollo/client'
 
 import { GraphQlItem } from 'src/types'
 import ProductList from 'src/components/ProductList'
+import PageTitle from 'src/components/PageTitle'
 
 const ProductsPage = () => {
   const { data, loading, error } = useSubscription<GraphQlItem>(gql`
@@ -22,6 +23,11 @@ const ProductsPage = () => {
     return <div>ERROR</div>
   }
 
-  return <ProductList data={data} />
+  return (
+    <>
+      <PageTitle title='Products' />
+      <ProductList data={data} />
+    </>
+  )
 }
 export default ProductsPage
