@@ -1,0 +1,25 @@
+body{
+  font-family: 'Hanken Grotesk', sans-serif !important;
+  // font-family: 'Satisfy', cursive;
+  // font-family: 'Smooch', cursive;
+  // font-family: 'Zeyada', cursive;
+}
+.around-card{
+  background-color: rgba(253, 136, 152, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  // align-self: stretch;
+  height: 100%;
+  h6{
+    color: rgba(86, 65, 255, 1);
+  }
+  .item-img{
+    height: 220px;
+    width: 100%;
+    object-fit: scale-down;
+    // border: 0.5px solid black;
+    background-color: rgba(253, 136, 152, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
