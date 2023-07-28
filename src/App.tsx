@@ -1,14 +1,11 @@
 import React from 'react'
 // import logo from './around-logo.webp'
-import './App.css'
-import ReviewListContainer from './components/ReviewList'
+import { RouterProvider } from 'react-router-dom'
+import './App.scss'
+import { router } from './router'
 
 const App = () => (
-    <div className="App">
-      <header className="App-header">
-        <ReviewListContainer />
-      </header>
-    </div>
+  <RouterProvider router={router}/>
 )
 
 export default App

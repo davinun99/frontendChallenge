@@ -1,9 +1,9 @@
 import React from 'react'
-import ReviewList from './ReviewList'
 import { gql, useSubscription } from '@apollo/client'
 import { GraphQlReview } from 'src/types'
+import ReviewList from 'src/components/ReviewList'
 
-const ReviewListContainer = () => {
+const ReviewsPage = () => {
   const { data, loading, error } = useSubscription<GraphQlReview>(gql`
     subscription QueryReview {
       queryReview {
@@ -28,4 +28,4 @@ const ReviewListContainer = () => {
 
   return <ReviewList data={data} />
 }
-export default ReviewListContainer
+export default ReviewsPage

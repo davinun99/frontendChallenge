@@ -6,11 +6,11 @@ interface Props {
   data: GraphQlItem;
 }
 
-const LaunchList: React.FC<Props> = ({ data }) => {
+const ProductList: React.FC<Props> = ({ data }) => {
   console.log('Review list', { data })
   return (
     <main className="container">
-        <h3 className='shadow-sm rounded p-3 my-4 text-center'>Reviews</h3>
+        <h3 className='shadow-sm rounded p-3 my-4 text-center'>Products</h3>
         <ul className='list-unstyled row'>
           {!!data.queryItem &&
             data.queryItem.map(
@@ -43,4 +43,4 @@ const LaunchList: React.FC<Props> = ({ data }) => {
   )
 }
 
-export default LaunchList
+export default ProductList

@@ -1,9 +1,10 @@
 import React from 'react'
-import ProductList from './ProductList'
 import { gql, useSubscription } from '@apollo/client'
-import { GraphQlItem } from 'src/types'
 
-const ReviewListContainer = () => {
+import { GraphQlItem } from 'src/types'
+import ProductList from 'src/components/ProductList'
+
+const ProductsPage = () => {
   const { data, loading, error } = useSubscription<GraphQlItem>(gql`
     subscription QueryProduct {
       queryItem {
@@ -23,4 +24,4 @@ const ReviewListContainer = () => {
 
   return <ProductList data={data} />
 }
-export default ReviewListContainer
+export default ProductsPage
