@@ -12,6 +12,7 @@ import ProductSkeleton from 'src/components/loaders/ProductSkeleton'
 
 const ProductsPage = () => {
   const [searchTerm, setSearchTerm] = React.useState('')
+  const [showCheapFirst, setShowCheapFirst] = React.useState(false)
   const { data, loading, error } = useSubscription<GraphQlItem>(gql`
     subscription QueryProduct {
       queryItem {
@@ -34,21 +35,21 @@ const ProductsPage = () => {
     navigate('/add-product')
   }
   const filterProducts: () => GraphQlItem = () => {
-    if (!data) {
-      return {
-        queryItem: []
+    // eslint-disable-next-line immutable/no-let
+    let _data: GraphQlItem = data || {
+      queryItem: []
+    }
+    if (searchTerm) {
+      const results = fuzzysort.go(searchTerm, _data.queryItem, {
+        limit: 20,
+        keys: ['name', 'description']
+      })
+      _data = {
+        queryItem: results.map(result => result.obj)
       }
     }
-    if (!searchTerm) {
-      return data
-    }
-    const results = fuzzysort.go(searchTerm, data.queryItem, {
-      limit: 20,
-      keys: ['name', 'description']
-    })
-    return {
-      queryItem: results.map(result => result.obj)
-    }
+    _data.queryItem.sort((a, b) => showCheapFirst ? a.price - b.price : b.price - a.price)
+    return _data
   }
   return (
     <>
@@ -65,6 +66,11 @@ const ProductsPage = () => {
             <FormControl placeholder='Search products by name!' value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
           </Col>
           <Col>
+            <Button className='me-2' type='button' variant='success'
+              onClick={() => setShowCheapFirst(!showCheapFirst)}
+            >
+              {!showCheapFirst ? 'Show cheapest products first' : 'Show more expensive products first'}
+            </Button>
             <Button className='btn btn-primary' type='button'
               onClick={goToAddProduct}
             >Add Product</Button>
