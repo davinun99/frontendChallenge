@@ -14,7 +14,7 @@ const Review = ({ review, className = 'col-12 col-md-6 col-lg-4 mb-2', itemName 
         <img alt='Reviewer' className='reviewer-photo' src={faker.image.avatar()} />
         <span className='ms-2'>
           {faker.person.fullName()}
-          {Math.random() > 0.6 && <i className="reviewer-check bi bi-check-circle-fill" />}
+          {Math.random() > 0.7 && <i className="reviewer-check bi bi-check-circle-fill" />}
         </span>
       </div>
       <p className='my-0 text-secondary'>{review.item?.name || itemName || 'Unknown item :o'}</p>

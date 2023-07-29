@@ -35,18 +35,17 @@ const ProductsPage = () => {
     navigate('/add-product')
   }
   const filterProducts: () => GraphQlItem = () => {
-    // eslint-disable-next-line immutable/no-let
-    let _data: GraphQlItem = data || {
-      queryItem: []
-    }
+    const _data: GraphQlItem = data
+      ? { ...data }
+      : {
+          queryItem: []
+        }
     if (searchTerm) {
       const results = fuzzysort.go(searchTerm, _data.queryItem, {
         limit: 20,
         keys: ['name', 'description']
       })
-      _data = {
-        queryItem: results.map(result => result.obj)
-      }
+      _data.queryItem = results.map(result => result.obj)
     }
     _data.queryItem.sort((a, b) => showCheapFirst ? a.price - b.price : b.price - a.price)
     return _data
