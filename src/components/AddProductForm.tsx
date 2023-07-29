@@ -38,7 +38,7 @@ const AddProductForm = () => {
         variables
       })
       toast.success(`Successfully created product ${variables.name}`)
-      navigate('/')
+      navigate('/products')
     } catch (error) {
       toast.error('Error creating product :( ')
     }

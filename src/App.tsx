@@ -1,13 +1,15 @@
 import React from 'react'
-// import logo from './around-logo.webp'
 import { RouterProvider } from 'react-router-dom'
-import './App.scss'
-import { router } from './router'
 import { Toaster } from 'react-hot-toast'
+
+import './styles/App.scss'
+import { router } from './router'
 
 const App = () => (
   <>
-    <div><Toaster position='top-right' /></div>
+    <div>
+      <Toaster position='top-right' />
+    </div>
     <RouterProvider router={router}/>
   </>
 )

@@ -9,10 +9,7 @@ interface Props {
 
 const ReviewList: React.FC<Props> = ({ data }) => (
   <main className="container">
-    <div className='d-flex justify-content-end'>
-      <button className='btn btn-primary mt-3' type='button'>Add Review</button>
-    </div>
-    <ul className='list-unstyled row mt-3'>
+    <ul className='list-unstyled row mt-5'>
       {!!data.queryReview &&
         data.queryReview.map(
           (review, i) =>
@@ -20,7 +17,7 @@ const ReviewList: React.FC<Props> = ({ data }) => (
             <li key={`review-${review.id}`} className="col-12 col-md-6 col-lg-4 mb-2">
               <div className='review-card h-100'>
                 <div className='d-flex align-items-center'>
-                  <img alt='Reviewer' className='reviewer-photo' src='https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png' />
+                  <img alt='Reviewer' className='reviewer-photo' src={faker.image.avatar()} />
                   <span className='ms-2'>
                     {faker.person.fullName()}
                     {Math.random() > 0.6 && <i className="reviewer-check bi bi-check-circle-fill" />}
