@@ -1,22 +1,16 @@
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ApolloProvider } from '@apollo/client'
 
 import App from './App'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
-
-const uri = 'https://blue-surf-1040009.us-east-1.aws.cloud.dgraph.io/graphql'
-
-const client = new ApolloClient({
-  uri,
-  cache: new InMemoryCache()
-})
+import { apolloClient } from './ApolloClient'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
+    <ApolloProvider client={apolloClient}>
       <App />
     </ApolloProvider>
   </React.StrictMode>
