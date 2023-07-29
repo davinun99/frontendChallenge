@@ -2,13 +2,14 @@
 import * as React from 'react'
 import { GraphQlReview } from 'src/types'
 import { faker } from '@faker-js/faker'
+import { Container } from 'react-bootstrap'
 
 interface Props {
   data: GraphQlReview;
 }
 
 const ReviewList: React.FC<Props> = ({ data }) => (
-  <main className="container">
+  <Container>
     <ul className='list-unstyled row mt-5'>
       {!!data.queryReview &&
         data.queryReview.map(
@@ -40,7 +41,7 @@ const ReviewList: React.FC<Props> = ({ data }) => (
             )
         )}
     </ul>
-  </main>
+  </Container>
 )
 
 export default ReviewList

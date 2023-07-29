@@ -1,13 +1,13 @@
 import React from 'react'
 import { gql, useSubscription } from '@apollo/client'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
+import { Breadcrumb, BreadcrumbItem, Button, Container } from 'react-bootstrap'
 
 import { GraphQlItem } from 'src/types'
 import ProductList from 'src/components/ProductList'
 import PageTitle from 'src/components/PageTitle'
 import ProductSkeleton from 'src/components/loaders/ProductSkeleton'
-import { Breadcrumb, BreadcrumbItem, Button, Container } from 'react-bootstrap'
 
 const ProductsPage = () => {
   const { data, loading, error } = useSubscription<GraphQlItem>(gql`
@@ -32,8 +32,8 @@ const ProductsPage = () => {
       <PageTitle title='Products' />
       <Container>
         <Breadcrumb>
-          <BreadcrumbItem href='/'>Home</BreadcrumbItem>
-          <BreadcrumbItem active href='#'>Products</BreadcrumbItem>
+          <BreadcrumbItem linkAs={NavLink} linkProps={{ to: '/' }}>Home</BreadcrumbItem>
+          <BreadcrumbItem active linkAs={NavLink} linkProps={{ to: '/products' }}>Products</BreadcrumbItem>
         </Breadcrumb>
       </Container>
       <Container>

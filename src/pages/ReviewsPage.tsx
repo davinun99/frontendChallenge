@@ -1,10 +1,13 @@
 import React from 'react'
 import { gql, useSubscription } from '@apollo/client'
+import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap'
+import { toast } from 'react-hot-toast'
+import { NavLink } from 'react-router-dom'
+
 import { GraphQlReview } from 'src/types'
 import ReviewList from 'src/components/ReviewList'
 import PageTitle from 'src/components/PageTitle'
-import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap'
-
+import ReviewSkeleton from 'src/components/loaders/ReviewSkeleton'
 const ReviewsPage = () => {
   const { data, loading, error } = useSubscription<GraphQlReview>(gql`
     subscription QueryReview {
@@ -20,12 +23,9 @@ const ReviewsPage = () => {
       }
     }
   `)
-  if (loading) {
-    return <div>Loading...</div>
-  }
 
-  if (error || !data) {
-    return <div>ERROR</div>
+  if (!loading && (error || !data)) {
+    toast.error('Error loading reviews :' + JSON.stringify(error))
   }
 
   return (
@@ -33,11 +33,11 @@ const ReviewsPage = () => {
       <PageTitle title='Reviews'/>
       <div className='container'>
         <Breadcrumb>
-          <BreadcrumbItem href='/'>Home</BreadcrumbItem>
-          <BreadcrumbItem active href='#'>Reviews</BreadcrumbItem>
+          <BreadcrumbItem linkAs={NavLink} linkProps={{ to: '/' }}>Home</BreadcrumbItem>
+          <BreadcrumbItem active>Reviews</BreadcrumbItem>
         </Breadcrumb>
       </div>
-      <ReviewList data={data} />
+      {loading ? <ReviewSkeleton /> : data && <ReviewList data={data} />}
     </>
   )
 }
