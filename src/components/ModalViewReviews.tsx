@@ -21,7 +21,11 @@ const ModalViewReviews = ({ item, isVisible, toggleModal }: Props) => {
       <Modal.Body>
         <ul className='list-unstyled row mt-5'>
           {item.reviews?.map(review => (
-            <Review key={review.id} review={review} />
+            <Review key={review.id}
+              className = 'col-12 col-md-6 mb-2'
+              itemName={item.name}
+              review={review}
+            />
           ))}
         </ul>
       </Modal.Body>
