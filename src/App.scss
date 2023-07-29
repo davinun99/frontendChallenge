@@ -21,7 +21,12 @@ body{
     margin: -40px 0 0 -40px;
   }
 }
-
+.review-btn{
+  background-color: rgba(253, 136, 152, 1);
+  &:hover{
+    background-color: rgba(253, 136, 152, 0.6);
+  }
+}
 .around-card{
   background-color: rgba(253, 136, 152, 0.2);
   border-radius: 5px;

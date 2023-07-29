@@ -20,3 +20,8 @@ export type GraphQLAddProduct = {
     numUids: number
   }
 }
+export type GraphQLAddReview = {
+  addReview: {
+    numUids: number
+  }
+}
