@@ -3,7 +3,12 @@ export type Item = {
   img: string;
   name: string;
   price: number;
+  reviews?: {
+    id: string;
+    text: string;
+  }[];
 }
+
 export type Review = {
   id: string;
   text: string;

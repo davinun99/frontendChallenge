@@ -17,6 +17,10 @@ const ProductsPage = () => {
         img
         price
         description
+        reviews {
+          id
+          text
+        }
       }
     }
   `)
