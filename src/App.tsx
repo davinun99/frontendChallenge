@@ -1,19 +1,17 @@
-import React from 'react';
-import logo from './around-logo.webp';
-import './App.css';
+import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="breathing-animation" alt="logo" />
-        <p>
-          Check <code>README.md</code> file
-        </p>
-        
-      </header>
+import './styles/App.scss'
+import { router } from './router'
+
+const App = () => (
+  <>
+    <div>
+      <Toaster position='top-right' />
     </div>
-  );
-}
+    <RouterProvider router={router}/>
+  </>
+)
 
-export default App;
+export default App
