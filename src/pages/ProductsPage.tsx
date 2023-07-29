@@ -62,10 +62,10 @@ const ProductsPage = () => {
       </Container>
       <Container>
         <Row className='align-items-center'>
-          <Col>
+          <Col className='mb-2' lg={7} xs={12}>
             <FormControl placeholder='Search products by name!' value={searchTerm} onChange={e => setSearchTerm(e.target.value)} />
           </Col>
-          <Col>
+          <Col className='mb-4 mb-lg-2'>
             <Button className='me-2' type='button' variant='success'
               onClick={() => setShowCheapFirst(!showCheapFirst)}
             >
